@@ -1,0 +1,9 @@
+Retrieval-Augmented Generation, often called RAG, is a pattern where a language model does not answer only from its internal parameters. 
+Instead, it first retrieves relevant pieces of text from an external knowledge base, such as a vector database, and then uses those texts as additional context for the answer.
+
+The basic flow is: a user asks a question, we convert that question into an embedding, and then we use that embedding to search a vector store for similar chunks of text. 
+The retrieved chunks are formatted into a context string, which is passed along with the question into the large language model. 
+Because the model sees real documents in the prompt, its answer is more grounded and easier to trace back to sources.
+
+RAG is useful whenever we want the model to stay up to date, use private data, or reduce hallucinations. 
+Instead of fine-tuning a model for every change in the knowledge base, we only update the documents and their embeddings in the vector database.

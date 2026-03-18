@@ -1,0 +1,3 @@
+{"question": "What is Retrieval-Augmented Generation (RAG)?", "source_doc_id": "rag_intro.txt"}
+{"question": "Why do we use vector embeddings in a RAG system?", "source_doc_id": "embeddings_basics.txt"}
+{"question": "What is the role of a retriever in the RAG pipeline?", "source_doc_id": "rag_components.txt"}

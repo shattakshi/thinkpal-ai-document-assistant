@@ -1,0 +1,11 @@
+A RAG pipeline is usually split into several components. 
+First we have the loader and text splitter that read raw documents and break them into manageable chunks. 
+Next, the embedding component transforms each chunk into a vector and stores it in a vector database together with metadata.
+
+On top of the vector store we build a retriever. 
+The retriever takes a user query, embeds it, and returns the top k most relevant chunks based on similarity search. 
+A prompt builder then takes the retrieved chunks, formats them into a context string, and combines that string with the user question.
+
+Finally, the large language model receives a prompt that contains both the question and the retrieved context. 
+The model generates an answer that should be grounded in the provided documents. 
+Many systems also return the sources alongside the answer so that users can inspect the original pages.

@@ -1,0 +1,11 @@
+Vector embeddings are numerical representations of text. 
+The goal of an embedding model is to map semantically similar pieces of text to vectors that are close to each other in a high dimensional space. 
+In a RAG system, embeddings are used both for documents and for user questions.
+
+The typical workflow is: we split documents into chunks, clean the text, and send each chunk to an embedding model. 
+The output vectors are stored in a vector database like Chroma or FAISS together with metadata such as source file and page number. 
+Later, when a user sends a query, we embed the query and perform a similarity search against those stored vectors.
+
+Cosine similarity or dot product is often used to measure how close two vectors are. 
+Higher similarity scores indicate that the document chunk is more relevant to the query. 
+Good embeddings and a well-tuned similarity search are critical for a high quality retriever.
